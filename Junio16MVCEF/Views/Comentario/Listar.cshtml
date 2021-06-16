@@ -1,0 +1,33 @@
+﻿@using Junio16MVCEF.Models
+@model List<Comentario>
+
+<!-- https://www.tablesgenerator.com/html_tables  -->
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-color:#9ABAD9;border-spacing:0;}
+.tg td{background-color:#EBF5FF;border-color:#9ABAD9;border-style:solid;border-width:0px;color:#444;
+  font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{background-color:#409cff;border-color:#9ABAD9;border-style:solid;border-width:0px;color:#fff;
+  font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-0lax">Titulo</th>
+    <th class="tg-0lax">Descripcion</th>
+    <th class="tg-0lax">Nombre</th>
+  </tr>
+</thead>
+<tbody>
+    @foreach(var com in Model) {
+      <tr>
+        <td class="tg-0lax">@com.Titulo</td>
+        <td class="tg-0lax">@com.Descripcion</td>
+        <td class="tg-0lax">@com.Nombre</td>
+      </tr>
+  }
+</tbody>
+</table>
+<br>
+<a href='/Comentario/Comentar'>Agregar un comentario</a>

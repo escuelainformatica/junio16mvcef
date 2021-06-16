@@ -1,0 +1,22 @@
+﻿@using Junio16MVCEF.Models
+@model Comentario
+@{
+}
+<h1>Formulario get y post</h1>
+
+
+
+<form method="post" >
+
+	Título:<br/>
+	<input type='text' name="Titulo" value="@Model.Titulo" /><br/>
+	Descripción:<br/>
+	<textarea name="Descripcion">@Model.Descripcion</textarea><br/>
+	Nombre:<br/>
+	<input type='text' name="Nombre" value="@Model.Nombre" /><br/>
+	<br>
+	<input type='submit' value="Agregar Comentario" /><br>
+
+	<br>
+	<div style="background-color:red">@ViewBag.resultado</div>
+</form>
